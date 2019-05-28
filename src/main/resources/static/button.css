@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.wrapper {
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 120px;
+  text-align: center;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.button {
+  width: 9.45em;
+  height: 3.15em;
+  background: #19A087;  
+  border-radius: 0.189em;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  margin: auto;
+  position: absolute;
+  top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  transition: background 0.5s
+}
+
+.button:hover {
+  background: #39B398;
+}
+
+.button p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  letter-spacing: 0.063em;
+  line-height: 3.0em;
+  color: #fff;  
+  text-shadow: 0 0 0.063em #7a7a7a;
+}
+
+.animation {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+}
