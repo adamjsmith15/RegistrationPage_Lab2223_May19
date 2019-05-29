@@ -10,7 +10,8 @@
 </head>
 <body>
 	<h1>Please fill the form to register</h1>
-	<form name="reg" action="register" method="POST" onsubmit="required()">
+	<!-- form to take in user information and put into member class -->
+	<form name="reg" action="adduser" method="POST" onsubmit="required()">
 		<label for="txtFirstName">First Name:</label><input type="text" name="first" required> 
 		<br> 
 		<label for="txtLastName">Last Name:</label><input type="text" name="last" required> 
@@ -39,6 +40,7 @@
 		<input type="submit" value="Register">
 		</div>
 	</form>
+	<!-- div holds password verifier information see style.css for more info -->
 	<div id="message">
   <h3>Password must contain the following:</h3>
   <p id="letter" class="invalid">A <b>lowercase</b> letter</p>

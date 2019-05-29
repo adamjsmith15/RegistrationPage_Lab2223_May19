@@ -12,20 +12,21 @@ public class LabController {
 	@Autowired
 	private Member member;
 
+	@RequestMapping("/")
 	public ModelAndView index() {
-		ModelAndView mv = new ModelAndView("Hello, Adam!");
+		ModelAndView mv = new ModelAndView("index");
 		return mv;
 
 	}
 
-	@RequestMapping("redirect")
-	public ModelAndView redirect() {
+	@RequestMapping("/register")
+	public ModelAndView register() {
 		return new ModelAndView("register");
 	}
-	
-	@PostMapping("register")
-	public ModelAndView formDetails(@RequestParam("first") String fName, @RequestParam("last") String lName, @RequestParam("email") String email, 
-			@RequestParam("pn") String pn, @RequestParam("pass") String pass) {
+
+	@PostMapping("/adduser")
+	public ModelAndView formDetails(@RequestParam("first") String fName, @RequestParam("last") String lName,
+			@RequestParam("email") String email, @RequestParam("pn") String pn, @RequestParam("pass") String pass) {
 		Member newMember = new Member(fName, lName, pn, email, pass);
 		return new ModelAndView("adduser", "nM", "Hello " + newMember.getFirstName());
 	}
