@@ -17,7 +17,7 @@
 	href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
 <link rel="stylesheet" type="text/css" href="/button.css">
 <meta charset="UTF-8">
-<title>Lab 22</title>
+<title>GC Coffee</title>
 </head>
 <body>
 	<p>Welcome to the GC COFFEE</p>
@@ -27,6 +27,11 @@
 		<input type="submit" class="button animation" value="Register!">
 	</form>
 	<div class="wrapper"></div>
+	
+	<form action="member">
+		<input type="submit" value="Members">
+	</form>
+
 
 
 	<script

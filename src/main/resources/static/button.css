@@ -52,3 +52,7 @@
   -webkit-animation-iteration-count: 1;
   -moz-animation-iteration-count: 1;
 }
+
+# member{
+	text-align: right;
+}

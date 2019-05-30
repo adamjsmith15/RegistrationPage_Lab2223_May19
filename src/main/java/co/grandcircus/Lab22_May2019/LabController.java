@@ -9,8 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LabController {
+	
 	@Autowired
-	private Member member;
+	MemberJbdcDao dao;
 
 	@RequestMapping("/")
 	public ModelAndView index() {
@@ -26,8 +27,15 @@ public class LabController {
 
 	@PostMapping("/adduser")
 	public ModelAndView formDetails(@RequestParam("first") String fName, @RequestParam("last") String lName,
-			@RequestParam("email") String email, @RequestParam("pn") String pn, @RequestParam("pass") String pass) {
-		Member newMember = new Member(fName, lName, pn, email, pass);
+			@RequestParam("email") String email, @RequestParam("pn") String pn, @RequestParam("pass") String pass,
+			@RequestParam("gender") String gender, @RequestParam("date") String date, @RequestParam("description") String description) {
+		Member newMember = new Member(fName, lName, pn, email, pass, date, gender, description);
+		dao.addMember(fName, lName, pn, email, pass, date, gender, description);
 		return new ModelAndView("adduser", "nM", "Hello " + newMember.getFirstName());
+	}
+	@RequestMapping("/member")
+	public ModelAndView memberPage() {
+		
+		return new ModelAndView("memberlist", "member", dao.findAllMembers());
 	}
 }

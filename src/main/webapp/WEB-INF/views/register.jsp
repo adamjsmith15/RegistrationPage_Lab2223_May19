@@ -34,7 +34,7 @@
 		<label for="txtbday">Birthdate:</label><input type= "date" name="date" required>
 			<p>
 		<label>Put some text in a box</label>
-		<textarea id="myTextArea" name = textytext rows="3" cols="80">Your text here</textarea>
+		<textarea id="myTextArea" name = "description" rows="3" cols="80">Your text here</textarea>
 		</p>
 		<div class="buttonholder">
 		<input type="submit" value="Register">
