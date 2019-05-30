@@ -22,5 +22,9 @@ public class MemberJbdcDao {
 		String addQuery = "insert into Users(firstname, lastname, phonenum, email, password, birthdate, gender, description) values(?,?,?,?,?,?,?,?)";
 		return jdbcTemplate.update(addQuery, firstName, lastName, pNumber, email, password, bDate, gender, description);
 	}
+	
+	public List<Item> findAllItems(){
+		return jdbcTemplate.query("select * from Items", new BeanPropertyRowMapper<Item>(Item.class));
+	}
 
 }

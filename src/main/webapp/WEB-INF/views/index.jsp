@@ -31,7 +31,25 @@
 	<form action="member">
 		<input type="submit" value="Members">
 	</form>
-
+	<table border=2>
+	<thead>
+	<tr>
+	<td>Name</td>
+	<td>Description</td>
+	<td>Price</td>
+	</tr>
+	</thead>
+	<tbody>
+	<c:forEach items="${ i }" var="j">
+	<tr>
+	<td> ${ j.name } </td>
+	<td> ${ j.description } </td>
+	<td>$${ j.price }</td>
+	<td><a href="addItem$id=${j.id }">add</a></td>
+	</tr>
+	</c:forEach>
+	</tbody>
+	</table>
 
 
 	<script

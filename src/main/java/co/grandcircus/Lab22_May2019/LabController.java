@@ -15,7 +15,8 @@ public class LabController {
 
 	@RequestMapping("/")
 	public ModelAndView index() {
-		ModelAndView mv = new ModelAndView("index");
+		
+		ModelAndView mv = new ModelAndView("index", "i", dao.findAllItems());
 		return mv;
 
 	}
